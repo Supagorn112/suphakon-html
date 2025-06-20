@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(247, 247, 247);
+        }
+        h1{
+            font-family: Kanit;
+            color: coral;
+            text-align: center;
+        }
+        h3{
+            font-family: Kanit;
+            color: coral;
+            margin-left: 20px;
+        }
+        p{
+            font-family: Kanit;
+            color: rgb(0, 0, 0);
+            margin-left: 20px;
+        }
+        div{
+            font-family: Kanit;
+            color: rgb(0, 0, 0);
+            background-color: rgb(224, 191, 107);
+            margin-left: 20px;
+            display: block;
+            padding: 10px;
+            margin: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML/CSS</h1>
+    <h3><b>วิธีการนำ CSS ไปใช้กับ HTML มีอยู่ 3 วิธี ดังนี้</b></h3>
+    <h3>1. Inline</h3>
+    <p>เป็นการเขียน CSS เข้าไปในแท็ก HTML โดยใช้ style attribute
+        ข้อดี : ง่ายและสะดวกในการทำงาน เพราะเขียนลงไปใน Tag ได้เลยข้อเสีย : โค๊ดไม่ระเบียบ ดูรกไม่สวยงาม, ทำให้ไฟล์ html
+        มีขนาดที่ใหญ่ขึ้น และ ในกรณีที่ต้องการแก้ css ตรงจุดนั้น จะต้องตามไปแก้ทุกไฟล์ ไม่สามารถ rewrite CSS ได้</p>
+    <div>&lt; style ="color:#ffffff">ตัวหนังสือ&gt;</div>
+    <h3>2. Internal</h3>
+    <p>เป็นการเขียน CSS เข้าไปในไฟล์ HTML โดยจะแทรกอยู่ในแท็ก %lt;head%gt; ในไฟล์ HTML นั้นและมีแท็ก %lt;style%gt;…%lt;/style%gt; ครอบอยู่
+ข้อดี : ง่าย และสามารถครอบคลุมได้ทั้งหน้าเพจนั้นๆ
+ข้อเสีย : ไม่สามารถนำ css นี้ไปใช้กับหน้าอื่น ๆ ได้ง่าย เหมาะกับการแก้เฉพาะหน้าเท่านั้น</p>
+<div><pre><code>
+    &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;ชื่อเรื่องบทความ&lt;/title&gt;
+    &lt;meta name="description" content="อธิบายบทความ"&gt;
+    &lt;meta name="keywords" content="คีย์เวิร์ดของบทคความคั้นด้วยเครื่องหมาย คอมม่า"&gt;
+    &lt;style&gt;
+        body{
+            background: #f2f2f2;
+            padding: 10px;
+            margin: 10px;
+        }
+        p{color: #ff0000;
+}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;ส่วนเนื้อหาของบทความ&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+</body>
+
+</html>
